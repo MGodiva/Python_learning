@@ -1,11 +1,11 @@
 lst = [10, 5, 8, ]
-def modifylist(lst):
-    l = []
-    for i in range(len(lst)):
-        if lst[i] % 2 == 0:
-            l.append(int(lst[i]/2))
-    lst[:] = l
-modifylist(lst)
-print(lst)
-modifylist(lst)
-print(lst)
+def modify_list(l):
+    lst = []
+    for el in l:
+        if el % 2 == 0:
+            lst.append(el//2)
+    l[:] = lst
+modifylist(l)
+print(l)
+modifylist(l)
+print(l)
