@@ -1,0 +1,8 @@
+s = list(input().lower().split())
+num = {}
+for word in s:
+    count = num.get(word,0)
+    num[word] = count + 1
+num_list = num.keys()
+for words in num_list:
+    print(words, num[words])
