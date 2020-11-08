@@ -1,0 +1,11 @@
+dict = {}
+n = int(input())
+def f(x):
+    return x + 1
+for i in range(n):
+    x=int(input())
+    if x in dict:
+        print(dict[x])
+    else:
+        dict[x] = f(x)
+        print(dict[x])
