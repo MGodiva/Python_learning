@@ -1,0 +1,19 @@
+with open ('dataset_3363_2.txt') as file_in, open("out.txt", 'w') as file_out:
+    for line in file_in:
+        list_digit = []
+        list_letter = []
+        y = ''
+        text1 = ''
+    for elem in line:
+        if elem.isdigit() == False:
+            list_letter.append(elem)
+            text1 += ','
+        else: 
+            text1 += elem
+    list_digit = text1.split(',')
+    del list_digit[0]
+    for i in range(len(list_digit)-1):
+        print
+        y += (int(list_digit[i]) * (list_letter[i]))
+        print(y)
+    file_out.write(y)  
