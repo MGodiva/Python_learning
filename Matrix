@@ -1,0 +1,24 @@
+s = ''
+matrix = []
+while s != ['end']:
+    s = input().split()
+    matrix.append(s)
+del matrix[-1]
+nrow = len(matrix)
+ncol = len(matrix[0])
+resultmatrix = [[0] * ncol for i in range(nrow)]
+for i in range(nrow):
+    for j in range(ncol):
+        print(i,j)
+        if j == ncol-1:
+            right = matrix[i][0]
+        else:
+            right = matrix[i][j+1]
+        if i == nrow-1:
+            bottom = matrix[0][j]
+        else:
+            bottom = matrix[i+1][j]
+        top = matrix[i-1][j]
+        left = matrix[i][j-1]
+        resultmatrix[i][j] = int(left) + int(right) + int(top) + int(bottom)
+print(resultmatrix)
