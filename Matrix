@@ -9,7 +9,6 @@ ncol = len(matrix[0])
 resultmatrix = [[0] * ncol for i in range(nrow)]
 for i in range(nrow):
     for j in range(ncol):
-        print(i,j)
         if j == ncol-1:
             right = matrix[i][0]
         else:
@@ -21,4 +20,7 @@ for i in range(nrow):
         top = matrix[i-1][j]
         left = matrix[i][j-1]
         resultmatrix[i][j] = int(left) + int(right) + int(top) + int(bottom)
-print(resultmatrix)
+for i in range(nrow):
+    for j in range(ncol):
+           print(resultmatrix[i][j], end = ' ')
+    print()  
